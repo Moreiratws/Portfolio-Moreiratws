@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Glow externo -->
+  <circle cx="32" cy="28" r="26" fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.4" filter="url(#glow)"></circle>
+
+  <!-- Tela do computador -->
+  <rect x="8" y="10" width="48" height="30" rx="3" ry="3" fill="#001a26" stroke="#00e5ff" stroke-width="2" filter="url(#glow)"></rect>
+  
+  <!-- Reflexo na tela -->
+  <polygon points="10,12 40,12 54,36 10,36" fill="url(#reflex)" opacity="0.4"></polygon>
+
+  <!-- Linhas internas simulando interface -->
+  <line x1="14" y1="18" x2="46" y2="18" stroke="#00ffff" stroke-width="1"></line>
+  <line x1="14" y1="24" x2="40" y2="24" stroke="#00ffff" stroke-width="1"></line>
+  <line x1="14" y1="30" x2="36" y2="30" stroke="#00ffff" stroke-width="1"></line>
+  <circle cx="50" cy="30" r="2" fill="#00e5ff"></circle>
+
+  <!-- Suporte -->
+  <rect x="28" y="40" width="8" height="6" fill="#00e5ff" rx="1" filter="url(#glow)"></rect>
+  
+  <!-- Base -->
+  <rect x="18" y="47" width="28" height="5" rx="2" fill="#00e5ff" filter="url(#glow)"></rect>
+
+  <!-- Definições de gradiente e glow -->
+  <defs>
+    <linearGradient id="reflex" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00e5ff; stop-opacity:0.6"></stop>
+      <stop offset="100%" style="stop-color:#001a26; stop-opacity:0"></stop>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
